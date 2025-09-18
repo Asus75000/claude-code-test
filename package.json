@@ -1,0 +1,16 @@
+{
+  "name": "matrix-chat-n8n",
+  "version": "1.0.0",
+  "description": "Matrix-themed chat interface with n8n webhook integration",
+  "main": "public/index.html",
+  "scripts": {
+    "build": "echo 'Static site, no build needed'"
+  },
+  "keywords": ["matrix", "chat", "n8n", "webhook", "ai"],
+  "author": "Generated with Claude Code",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": ">=14"
+  }
+}
