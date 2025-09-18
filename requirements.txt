@@ -1,0 +1,8 @@
+# No additional dependencies required
+# Uses only Python standard library modules:
+# - json
+# - urllib.request
+# - urllib.parse
+# - os
+# - datetime
+# - http.server

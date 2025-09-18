@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Matrix rain background -->
+    <canvas id="matrix-rain"></canvas>
+
+    <div class="container">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="terminal-title">
+                <span class="terminal-icon">◉</span>
+                <span class="terminal-text">SYSTEM://CHAT.INTERFACE</span>
+            </div>
+            <div class="terminal-controls">
+                <span class="control minimize">_</span>
+                <span class="control maximize">□</span>
+                <span class="control close">×</span>
+            </div>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="status-indicator"></div>
+                <span class="chat-title">Neural Network Communication Portal</span>
+                <span class="connection-status" id="connectionStatus">CONNECTED</span>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="messages-container" id="messagesContainer">
+                <div class="welcome-message">
+                    <pre class="ascii-art">
+╔═══════════════════════════════════════╗
+║  Welcome to the Matrix Chat Interface ║
+║      Establishing connection...       ║
+╚═══════════════════════════════════════╝
+                    </pre>
+                    <div class="system-message">
+                        &gt; System initialized<br>
+                        &gt; Neural network online<br>
+                        &gt; Ready for communication_
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <span class="input-prefix">&gt;</span>
+                    <input
+                        type="text"
+                        id="messageInput"
+                        class="message-input"
+                        placeholder="Enter your message..."
+                        autocomplete="off"
+                    >
+                    <button id="sendButton" class="send-button">
+                        <span class="send-icon">⮞</span>
+                        TRANSMIT
+                    </button>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-text">AI is thinking</span>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="terminal-footer">
+            <span class="footer-text">MATRIX_CHAT_v1.0</span>
+            <span class="footer-separator">|</span>
+            <span class="footer-text" id="currentTime"></span>
+            <span class="footer-separator">|</span>
+            <span class="footer-text">SECURE_CONNECTION</span>
+        </div>
+    </div>
+
+    <!-- Configuration Modal -->
+    <div class="config-modal" id="configModal">
+        <div class="modal-content">
+            <h2>Configure n8n Webhook</h2>
+            <input
+                type="text"
+                id="webhookUrl"
+                placeholder="Enter your n8n webhook URL..."
+                value=""
+            >
+            <button id="saveConfig">Save Configuration</button>
+            <button id="closeConfig">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Settings Button -->
+    <button class="settings-button" id="settingsButton" title="Configure Webhook">
+        ⚙
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

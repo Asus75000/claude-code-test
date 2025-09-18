@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ],
+  "functions": {
+    "api/webhook-proxy.py": {
+      "maxDuration": 30
+    }
+  },
+  "env": {
+    "N8N_WEBHOOK_URL": "@n8n_webhook_url"
+  }
+}
