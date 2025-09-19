@@ -15,7 +15,8 @@
       "Bash(npm install:*)",
       "Bash(vercel login:*)",
       "Bash(set VERCEL_TOKEN=mQ4EUFfxxuaE5rC0xY7goD3q)",
-      "Bash(vercel:*)"
+      "Bash(vercel:*)",
+      "Bash(set VERCEL_TOKEN=ssjBzAe5UtATkGWfGiFo9yu4)"
     ],
     "deny": [],
     "ask": []
